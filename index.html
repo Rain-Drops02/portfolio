@@ -11,11 +11,13 @@
 </head>
 <body>
     <header>
-        <nav id="header-nav-wrap" class="container">
-            <a class="header-btn" href=""><i class="fas fa-desktop fa-lg"></i>WORKS</a>
-            <a class="header-btn" href=""><i class="far fa-address-card fa-lg"></i>PLOFILE</a>
-            <a class="header-btn" href=""><i class="fas fa-list-ul fa-lg"></i>SKILLS</a>
-            <a class="header-btn" href=""><i class="far fa-envelope fa-lg"></i>CONTACT</a>
+        <nav id="header-bar">
+            <ul  id="header-li-wrap"  class="container">
+                <li><a class="header-li" href="#WORKS"><i class="fas fa-desktop fa-lg"></i>WORKS</a></li>
+                <li><a class="header-li" href="#PROFILE"><i class="far fa-address-card fa-lg"></i>PLOFILE</a></li>
+                <li><a class="header-li" href="#SKILLS"><i class="fas fa-list-ul fa-lg"></i>SKILLS</a></li>
+                <li> <a class="header-li" href="#CONTACT"><i class="far fa-envelope fa-lg"></i>CONTACT</a></li>
+            </ul>
         </nav>
         <article id="header-title-wrap">
             <h1 id="header-title">YUJIRO FUJINUMA</h1>
@@ -45,22 +47,27 @@
     </section><!--works-->
     <section id="profile">
         <h3 id="profile-title"><i class="far fa-address-card fa-lg"></i>PLOFILE</h3>
-        <p id="profile-note"></p>
-        <article>
-            <p><img src="" alt=""></p>
-            <p></p>
+        <p id="profile-note">よろしくお願いします</p>
+        <article id="profile-flex">
+            <p><img id="profile-img" src="img/profile.jpg" alt="プロフィール"></p>
+            <p id="profile-detail">現在私は岩手県立大学の4年生で、昨年1年間大学を休学し、海外でのビジネスインターンシップの参加や、プログラミングの学習をし、フリーランスとして独立しました。</p>
         </article>
     </section><!--profile-->
     <section id="skills">
         <h3 id="skills-title"><i class="fas fa-list-ul fa-lg"></i>SKILLS</h3>
-        <p id="skills-note"></p>
-        <article id="skills-wrap">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <p id="skills-note">スキルセット一覧です</p>
+        <article id="skills-flex" class="container">
+            <ul class="skills-wrap">
+                <li class="skill"><i class="fab fa-html5 fa-lg"></i>HTML</li>
+                <li class="skill"><i class="fab fa-css3 fa-lg"></i>CSS</li>
+                <li class="skill"><i class="fab fa-js fa-lg"></i>JQuery</li>
+                <li class="skill"><i class="fab fa-php fa-lg"></i>PHP</li>
+            </ul>
+            <ul class="skills-wrap">
+                <li class="skill"><i class="fab fa-sass fa-lg"></i>Sass</li>
+                <li class="skill"><i class="fab fa-wordpress fa-lg"></i>Wordpress</li>
+                <li class="skill"><i class="fab fa-adobe fa-lg"></i>Adobe XD</li>
+                <li class="skill"><i class="fab fa-github fa-lg"></i>github</li>
             </ul>
         </article><!--skills-wrap-->
     </section><!--skills-->
