@@ -1,0 +1,203 @@
+@import "variables";
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "MS PGothic", sans-serif;
+    letter-spacing: 1.5px;
+}
+
+
+
+/*   @mixin   */
+
+@mixin main-font($color) {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    color: $color;
+}
+
+@mixin sub-font($color) {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    color: $color;
+}
+
+
+@mixin local-title($color) {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
+    color: $color;
+}
+
+
+
+
+/*   css   */
+
+.container {
+    width: 1170px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+/*   ヘッダー     header   */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    height: 86vh;
+    position: relative;
+    
+    
+    #header-nav-wrap {
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
+    
+        .header-btn {
+            @include sub-font($black);
+            padding: 10px 0;
+
+            .fa-lg {
+                padding-right: 3px;
+            }
+        }
+    }
+
+    #header-title-wrap {
+        letter-spacing: .2em;
+        text-align: center;
+
+        #header-title {
+            font-size: 64px;
+            line-height: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+
+        #header-sub-title {
+            font-size: 20px;
+            padding-top: 5px;
+            position: absolute;
+            top: 62%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+    }
+}
+
+#works {
+    text-align: center;
+
+    #works-title {
+        @include local-title($black);
+        padding-bottom: 15px;
+
+        .fa-lg {
+            padding-right: 3px;
+        }
+    }
+
+    #works-note {
+        @include sub-font($black);
+    }
+
+    #works-flex {
+        display: flex;
+        justify-content: space-between;
+
+        .works {
+            padding: 40px 0;
+
+            .works-img {
+                width: 350px;
+                height: 250px;
+                background-size: cover;
+                object-fit: cover;
+                box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .works-name {
+                @include main-font($black);
+                padding-top: 15px;
+            }
+
+            .works-skills {
+                @include sub-font($black);
+            }
+        }
+    }
+    
+}
+
+
+
+
+/*以下リセットcss*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: bottom;
+}
+    
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
