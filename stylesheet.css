@@ -28,34 +28,41 @@ body {
 
 /*   ヘッダー     header   */
 header {
+  background-color: #ffffff;
+  height: 100vh;
+  position: relative;
+  background-color: #F7F7F7;
+}
+
+header #header-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
-  height: 86vh;
-  position: relative;
-}
-
-header #header-nav-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  z-index: 999;
+  background-color: #F7F7F7;
   -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
 }
 
-header #header-nav-wrap .header-btn {
+header #header-bar #header-li-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+header #header-bar #header-li-wrap .header-li {
   font-size: 16px;
   line-height: 30px;
   font-weight: 300;
   color: #333333;
-  padding: 10px 0;
 }
 
-header #header-nav-wrap .header-btn .fa-lg {
+header #header-bar #header-li-wrap .header-li .fa-lg {
   padding-right: 3px;
 }
 
@@ -84,8 +91,10 @@ header #header-title-wrap #header-sub-title {
           transform: translateY(-50%) translateX(-50%);
 }
 
+/*works*/
 #works {
   text-align: center;
+  padding: 50px 0;
 }
 
 #works #works-title {
@@ -143,6 +152,115 @@ header #header-title-wrap #header-sub-title {
   line-height: 30px;
   font-weight: 300;
   color: #333333;
+}
+
+/*profile*/
+#profile {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #F7F7F7;
+}
+
+#profile #profile-title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 15px;
+}
+
+#profile #profile-title .fa-lg {
+  padding-right: 3px;
+}
+
+#profile #profile-note {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #333333;
+}
+
+#profile #profile-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+#profile #profile-flex #profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#profile #profile-flex #profile-detail {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #333333;
+  width: 350px;
+  text-align: left;
+}
+
+/*SKILLS*/
+#skills {
+  text-align: center;
+  padding: 50px 0;
+}
+
+#skills #skills-title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 15px;
+}
+
+#skills #skills-title .fa-lg {
+  padding-right: 3px;
+}
+
+#skills #skills-note {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #333333;
+}
+
+#skills #skills-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 700px;
+  max-width: 100%;
+}
+
+#skills #skills-flex .skills-wrap {
+  width: 350px;
+  padding-top: 30px;
+}
+
+#skills #skills-flex .skills-wrap .skill {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #333333;
+  padding: 10px 0;
+}
+
+#skills #skills-flex .skills-wrap .skill .fa-lg {
+  padding-right: 3px;
 }
 
 /*以下リセットcss*/
