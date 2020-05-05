@@ -41,6 +41,7 @@ body {
     line-height: 40px;
     font-weight: 600;
     color: $color;
+    padding-bottom: 15px;
 }
 
 
@@ -57,29 +58,37 @@ body {
 
 
 
+
+
 /*   ヘッダー     header   */
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     background-color: $white;
-    height: 86vh;
+    height: 100vh;
     position: relative;
-    
-    
-    #header-nav-wrap {
-        display: flex;
-        justify-content: space-around;
-        box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
-    
-        .header-btn {
-            @include sub-font($black);
-            padding: 10px 0;
+    background-color: $background;
 
-            .fa-lg {
-                padding-right: 3px;
+    #header-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: $background;
+        box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+    
+        #header-li-wrap {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            
+            .header-li {
+                @include sub-font($black);
+                
+
+                .fa-lg {
+                    padding-right: 3px;
+                }
             }
         }
     }
@@ -87,7 +96,7 @@ header {
     #header-title-wrap {
         letter-spacing: .2em;
         text-align: center;
-
+        
         #header-title {
             font-size: 64px;
             line-height: 1;
@@ -108,12 +117,19 @@ header {
     }
 }
 
+
+
+
+
+
+/*works*/
+
 #works {
     text-align: center;
+    padding: 50px 0;
 
     #works-title {
         @include local-title($black);
-        padding-bottom: 15px;
 
         .fa-lg {
             padding-right: 3px;
@@ -149,7 +165,98 @@ header {
             }
         }
     }
-    
+}
+
+
+
+
+
+
+/*profile*/
+
+#profile {
+    text-align: center;
+    padding: 50px 0;
+    background-color: $background;
+
+    #profile-title {
+        @include local-title($black);
+
+        .fa-lg {
+            padding-right: 3px;
+        }
+    }
+
+    #profile-note {
+        @include sub-font($black);
+    }
+
+    #profile-flex {
+        display: flex;
+        justify-content: space-between;
+        width: 700px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 0;
+
+        #profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #profile-detail {
+            @include sub-font($black);
+            width: 350px;
+            text-align: left;
+        }
+    }
+}
+
+
+
+
+
+
+/*SKILLS*/
+
+#skills {
+    text-align: center;
+    padding: 50px 0;
+
+    #skills-title {
+        @include local-title($black);
+
+        .fa-lg {
+            padding-right: 3px;
+        }
+    }
+
+    #skills-note {
+        @include sub-font($black);
+    }
+
+    #skills-flex {
+        display: flex;
+        justify-content: space-evenly;
+        width: 700px;
+        max-width: 100%;
+
+        .skills-wrap {
+            width: 350px;
+            padding-top: 30px;
+
+            .skill {
+                @include main-font($black);
+                padding: 10px 0;
+
+                .fa-lg {
+                    padding-right: 3px;
+                }
+            }
+        }
+    }
 }
 
 
