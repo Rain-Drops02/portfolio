@@ -20,9 +20,13 @@ body {
 /*   @mixin   */
 /*   css   */
 .container {
-  width: 1170px;
+  width: 1100px;
+  padding: 0 30px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+#wrap {
   overflow: hidden;
 }
 
@@ -39,7 +43,7 @@ header #header-bar {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 998;
   background-color: #F7F7F7;
   -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
@@ -52,7 +56,7 @@ header #header-bar #header-li-wrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 30px;
 }
 
 header #header-bar #header-li-wrap .header-li {
@@ -64,6 +68,69 @@ header #header-bar #header-li-wrap .header-li {
 
 header #header-bar #header-li-wrap .header-li .fa-lg {
   padding-right: 3px;
+}
+
+header #header-bar #header-responsive #menu-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #333333;
+}
+
+header #header-bar #header-responsive #menu-wrap .fas {
+  font-weight: 900;
+}
+
+header #menu-show-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+}
+
+header #menu-show-wrap #menu-show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 400px;
+  height: auto;
+  text-align: center;
+}
+
+header #menu-show-wrap #menu-show .fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+header #menu-show-wrap #menu-show .menu-show-btn-wrap {
+  padding: 10px 0;
+}
+
+header #menu-show-wrap #menu-show .menu-show-btn-wrap .menu-show-btn {
+  font-size: 18px;
+  color: #333333;
+  padding: 0 20px;
+  font-weight: bold;
 }
 
 header #header-title-wrap {
@@ -123,6 +190,8 @@ header #header-title-wrap #header-sub-title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #works #works-flex .works {
@@ -130,8 +199,8 @@ header #header-title-wrap #header-sub-title {
 }
 
 #works #works-flex .works .works-img {
-  width: 350px;
-  height: 250px;
+  width: 310px;
+  height: 210px;
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
@@ -187,7 +256,7 @@ header #header-title-wrap #header-sub-title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 700px;
+  width: 650px;
   max-width: 100%;
   margin: 0 auto;
   padding: 40px 0;
@@ -210,10 +279,25 @@ header #header-title-wrap #header-sub-title {
   text-align: left;
 }
 
+#profile #profile-flex #profile-detail .profile-link {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #333333;
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(0, #ffff66));
+  background: linear-gradient(transparent 50%, #ffff66 0);
+}
+
+#profile #profile-flex #profile-detail .profile-link:hover {
+  color: red;
+}
+
 /*SKILLS*/
 #skills {
   text-align: center;
   padding: 50px 0;
+  background-color: #ffffff;
 }
 
 #skills #skills-title {
@@ -256,11 +340,58 @@ header #header-title-wrap #header-sub-title {
   line-height: 32px;
   font-weight: 600;
   color: #333333;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 #skills #skills-flex .skills-wrap .skill .fa-lg {
   padding-right: 3px;
+}
+
+/*contact*/
+#contact {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #F7F7F7;
+}
+
+#contact #contact-title {
+  font-size: 28px;
+  line-height: 40px;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 15px;
+}
+
+#contact #contact-title .fa-lg {
+  padding-right: 3px;
+}
+
+#contact #contact-note {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #333333;
+}
+
+#contact #contact-mail {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #333333;
+  padding-top: 50px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333333;
+}
+
+footer #footer-note {
+  font-size: 14px;
+  color: #5D7E8C;
+  line-height: 20px;
+  font-weight: 300;
+  padding: 10px 0;
 }
 
 /*以下リセットcss*/
