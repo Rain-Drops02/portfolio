@@ -95,69 +95,7 @@ header {
                 }
             }
         }
-
-        #header-responsive {
-        
-            #menu-wrap {
-                display: flex;
-                flex-direction: column;
-                font-size: 12px;
-                text-align: center;
-                font-weight: 600;
-                color: $black;
-
-                .fas {
-                    font-weight: 900;
-                }
-            }
-        }
     }
-        #menu-show-wrap {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            z-index: 999;
-            display: none;
-        
-        
-            #menu-show {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                background-color: #e6ecf0;
-                padding: 20px 0 40px;
-                border-radius: 10px;
-                width: 400px;
-                height: auto;
-                text-align: center;
-
-                .fa-times {
-                    position: absolute;
-                    top: 12px;
-                    right: 12px;
-                    color: rgba(128, 128, 128, 0.46);
-                    cursor: pointer;
-                }
-        
-        
-                .menu-show-btn-wrap {
-                    padding: 10px 0;
-        
-                    .menu-show-btn {
-                        font-size: 18px;
-                        color: #333333;
-                        padding: 0 20px;
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
 
 
     #header-title-wrap {
@@ -231,6 +169,11 @@ header {
             .works-skills {
                 @include sub-font($black);
             }
+
+            .works-link {
+                @include sub-font($black);
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -262,7 +205,7 @@ header {
     #profile-flex {
         display: flex;
         justify-content: space-between;
-        width: 650px;
+        width: 800px;
         max-width: 100%;
         margin: 0 auto;
         padding: 40px 0;
@@ -270,13 +213,14 @@ header {
         #profile-img {
             width: 200px;
             height: 200px;
+            margin: 0 100px;
             border-radius: 50%;
             object-fit: cover;
         }
 
         #profile-detail {
             @include sub-font($black);
-            width: 350px;
+            width: 400px;
             text-align: left;
 
             .profile-link {

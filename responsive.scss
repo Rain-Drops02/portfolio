@@ -73,32 +73,15 @@
             z-index: 999;
             background-color: $background;
             box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
-        
+
             #header-li-wrap {
-               display: none;
-            }
+                text-align: center;
+                
 
-            #header-responsive {
-                display: flex;
-                justify-content: flex-end;
-                padding-right: 17px;
-
-                .menu-wrap {
+                .header-li {
                     display: flex;
                     flex-direction: column;
-                    font-size: 12px;
-                    text-align: center;
-                    font-weight: bold;
-                    color: $black;
-                }
-                
-                .menu-icon {
-                    display: block;
-                    font-size: 50px;
-                    padding: 2px 0;
-                    z-index: 999;
-                    color: $black;
-                    font-weight: 900;
+                    font-size: 10px !important;
                 }
             }
         }

@@ -70,69 +70,6 @@ header #header-bar #header-li-wrap .header-li .fa-lg {
   padding-right: 3px;
 }
 
-header #header-bar #header-responsive #menu-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 12px;
-  text-align: center;
-  font-weight: 600;
-  color: #333333;
-}
-
-header #header-bar #header-responsive #menu-wrap .fas {
-  font-weight: 900;
-}
-
-header #menu-show-wrap {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 999;
-  display: none;
-}
-
-header #menu-show-wrap #menu-show {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #e6ecf0;
-  padding: 20px 0 40px;
-  border-radius: 10px;
-  width: 400px;
-  height: auto;
-  text-align: center;
-}
-
-header #menu-show-wrap #menu-show .fa-times {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  color: rgba(128, 128, 128, 0.46);
-  cursor: pointer;
-}
-
-header #menu-show-wrap #menu-show .menu-show-btn-wrap {
-  padding: 10px 0;
-}
-
-header #menu-show-wrap #menu-show .menu-show-btn-wrap .menu-show-btn {
-  font-size: 18px;
-  color: #333333;
-  padding: 0 20px;
-  font-weight: bold;
-}
-
 header #header-title-wrap {
   letter-spacing: .2em;
   text-align: center;
@@ -223,6 +160,14 @@ header #header-title-wrap #header-sub-title {
   color: #333333;
 }
 
+#works #works-flex .works .works-link {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #333333;
+  text-decoration: underline;
+}
+
 /*profile*/
 #profile {
   text-align: center;
@@ -256,7 +201,7 @@ header #header-title-wrap #header-sub-title {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 650px;
+  width: 800px;
   max-width: 100%;
   margin: 0 auto;
   padding: 40px 0;
@@ -265,6 +210,7 @@ header #header-title-wrap #header-sub-title {
 #profile #profile-flex #profile-img {
   width: 200px;
   height: 200px;
+  margin: 0 100px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -275,7 +221,7 @@ header #header-title-wrap #header-sub-title {
   line-height: 30px;
   font-weight: 300;
   color: #333333;
-  width: 350px;
+  width: 400px;
   text-align: left;
 }
 
